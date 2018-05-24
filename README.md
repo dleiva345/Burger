@@ -1,4 +1,4 @@
-# Eat-Da-Burger 
+# Eat-Da-Burger - Currently Under Construction
 
 * Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
 
@@ -14,11 +14,6 @@
         * To create a package.json type on terminal npm init
         * rune node server.js on terminal 
 
-### Installing 
-   * npm install --save -dev nodmon   
-   * npm install express -- save
-   * npm install body-parser --save
-   * npm install --save path
 
 
 ## Getting Started 
@@ -29,9 +24,12 @@
 ![image](https://user-images.githubusercontent.com/32282229/40517368-edaaad98-5f82-11e8-82cf-bd4be2c1a08b.png)
 
 
-## Application Currently Not Connecting 
+
+## Application Currently Not Connecting- probably due to a minur error (May The Lord Help Me!!!!)  
+
 ![image](https://user-images.githubusercontent.com/32282229/40517336-b7fad876-5f82-11e8-9eaf-31b1d5fa88e6.png)
-probably a minur error I couldn't resolve
+
+
 
 ## Authors
 
