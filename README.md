@@ -11,7 +11,8 @@
    * Node.Js Already Installed
    * Clone repo 
    * Package.Json Insalled
-        * To create a package.json type on terminal npm init 
+        * To create a package.json type on terminal npm init
+        * rune node server.js on terminal 
 
 ### Installing 
    * npm install --save -dev nodmon   
@@ -20,15 +21,21 @@
    * npm install --save path
 
 
-## Built With
+## Getting Started 
 
-* [Visual Studio]
-* [BootStrap]
-* [Node.JS]
+![image](https://user-images.githubusercontent.com/32282229/40517231-2a14d8d6-5f82-11e8-9f24-0bae7631503d.png)
+
+
+![image](https://user-images.githubusercontent.com/32282229/40517368-edaaad98-5f82-11e8-82cf-bd4be2c1a08b.png)
+
+
+## Application Currently Not Connecting 
+![image](https://user-images.githubusercontent.com/32282229/40517336-b7fad876-5f82-11e8-9eaf-31b1d5fa88e6.png)
+probably a minur error I couldn't resolve
 
 ## Authors
 
-***Debbie Leiva**
+Debbie Leiva
 
 ## License
 
