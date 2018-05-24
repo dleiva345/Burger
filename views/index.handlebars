@@ -1,33 +1,65 @@
-<h1>Eat-Da-Burger!!</h1>
-
-<h2>Burgers that need to be devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devour=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-  
-<h2>Burgers that have been devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devour =false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
+<div class="container" id="container">
+    <div class="jumbotron" id="header">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <h1 id="eat"><strong>Eat-Da-Burger!</strong></h1>
+    
+        <img src="/assets/img/burger.jpg" id="burger" height="115">
+    </div>
 
 
-  <button type="submit">Add Burger</button>
-</form>
+    <div class="row">
+        <div class="col-sm-12">
+            <form class="create-update-form" action="/burgers" method="POST">
+
+			<div class="form-group" id="add">
+                    <h3 class="title"> Add your burger name here:</h3>
+                    <br>
+                    <textarea id="box" class="form-control input-lg" type="text" name="b_name" rows="3"></textarea>
+                    </div>
+                <button type="submit" id="order" class="bt btn-default btn-lg">Add!</button>
+                </form>
+        </div>
+    </div>
+   <div>
+   <br>
+   <hr id="line">
+		<div class="col-sm-4" id="yum">
+			<div class="panel-panel default">
+			<h3 class="title">Enjoy!</h3>
+				<ul class="list-group">
+				{{#each burgers}}
+					{{#unless this.devoured}}
+					<li class="list-group-item">
+						<div class="input-group">
+							<p class="lead"> {{this.name}} </p>
+							<span class="input-group-btn">
+								<form action="burgers/{{this.id}}?_method=PUT" method="POST">
+									<input type="hidden" name="devoured" value="true">
+									<button id="button" class="btn btn-default btn-lg" type="submit">Eat Up!</button>
+								</form>
+							</span>
+						</div>
+					</li>
+					{{/unless}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</div>
+<div>
+		<div class="col-sm-4" id="devoured">
+		<h3 id="heaven">Devoured:</h3>
+			<div class="panel panel-default">
+				<ul class="list-group">
+				{{#each burgers}}
+					{{#if this.devoured}}
+					<li class="list-group-item">
+						<p class="lead">{{this.name}} </p>
+					</li>
+					{{/if}}
+				{{/each}}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
